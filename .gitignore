@@ -1,9 +1,11 @@
 # Compiled class file
 *.class
+
 out/
 
 # Log file
 *.log
+
 
 # temp files
 
@@ -11,6 +13,7 @@ out/
 *.diff
 *.patch
 *.tmp
+
 
 # BlueJ files
 *.ctxt
@@ -25,6 +28,7 @@ out/
 *.zip
 *.tar.gz
 *.rar
+
 
 #idea
 .idea/
