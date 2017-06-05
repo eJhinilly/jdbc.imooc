@@ -1,0 +1,38 @@
+# Compiled class file
+*.class
+out/
+
+# Log file
+*.log
+
+# temp files
+
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+#idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+# system ignore
+.DS_Store
+Thumbs.db
