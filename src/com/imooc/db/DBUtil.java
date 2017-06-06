@@ -29,18 +29,4 @@ public class DBUtil {
         return conn;
     }
 
-    public static void main(String[] args) throws Exception {
-	// write your code here
-        //1.加载驱动程序
-        Class.forName("com.mysql.jdbc.Driver");
-        //2.获得数据库的连接
-        Connection conn = DriverManager.getConnection(URL,USER,PASSWORD);
-        //3.通过数据库的连接操纵数据库，实现增删改查
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT user_name,age FROM imooc_goddess");
-
-        while (rs.next()){
-            System.out.println(rs.getString("user_name")+","+rs.getInt("age"));
-        }
-    }
 }
