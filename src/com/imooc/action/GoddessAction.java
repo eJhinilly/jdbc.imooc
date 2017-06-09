@@ -3,29 +3,52 @@ package com.imooc.action;
 import com.imooc.dao.GoddessDao;
 import com.imooc.model.Goddess;
 
-import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by localhost on 17-6-6.
  */
 public class GoddessAction {
 
-    public static void main(String[] args) throws Exception {
+    public void add(Goddess goddess) throws Exception{
+        GoddessDao dao = new GoddessDao();
 
-        GoddessDao g = new GoddessDao();
-        Goddess g1 = new Goddess();
+        goddess.setSex(1);
+        goddess.setCreate_user("ADMIN");
+        goddess.setUpdate_user("ADMIN");
+        goddess.setIsdel(0);
 
-        g1.setUser_name("小夏");
-        g1.setSex(1);
-        g1.setAge(22);
-        g1.setBirthday(new Date());
-        g1.setEmail("xiaoxia@imooc.com");
-        g1.setMobile("18766685587");
-        g1.setCreate_user("ADMIN");
-        g1.setUpdate_user("ADMIN");
-        g1.setIsdel(1);
+        dao.addGoddess(goddess);
+    }
 
-        g.addGoddess(g1);
+    public void edit(Goddess goddess) throws Exception{
+        GoddessDao dao = new GoddessDao();
+        dao.updateGoddess(goddess);
+    }
+
+    public void del(Integer id) throws Exception{
+        GoddessDao dao = new GoddessDao();
+        dao.delGoddess(id);
+    }
+
+    public List<Goddess> query() throws Exception{
+        GoddessDao dao = new GoddessDao();
+        return dao.query();
+    }
+
+    public List<Goddess> query(List<Map<String,Object>> params) throws Exception {
+        GoddessDao dao = new GoddessDao();
+        return dao.query(params);
+    }
+
+    public Goddess get(Integer id) throws Exception{
+        GoddessDao dao = new GoddessDao();
+        return dao.get(id);
+    }
+
+    public static void main(String[] args){
+
 
     }
 }
